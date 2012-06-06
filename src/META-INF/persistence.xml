@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="panaderia" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>entidades.Usuario</class>
+		<class>entidades.RutaReparto</class>
+		<class>entidades.Proveedor</class>
+		<class>entidades.Producto</class>
+		<class>entidades.Pedido</class>
+		<class>entidades.LineaPedido</class>
+		<class>entidades.LineaFactura</class>
+		<class>entidades.LineaEncargo</class>
+		<class>entidades.LineaAlbaran</class>
+		<class>entidades.Factura</class>
+		<class>entidades.Encargo</class>
+		<class>entidades.Empleado</class>
+		<class>entidades.Cliente</class>
+		<class>entidades.ArticuloOfertado</class>
+		<class>entidades.Albaran</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/panaderia"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+			<property name="javax.persistence.jdbc.password" value="secreto"/>
+		</properties>
+	</persistence-unit>
+</persistence>

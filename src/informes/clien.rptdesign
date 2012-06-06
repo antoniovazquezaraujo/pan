@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20120213 Build &lt;3.7.2.v20120214-1408></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/simple_listing.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.simplelisting</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">2.rptlibrary</property>
+            <property name="namespace">2</property>
+        </structure>
+        <structure>
+            <property name="fileName">new_library.rptlibrary</property>
+            <property name="namespace">new_library</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="27">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://localhost:3306/bd</property>
+            <property name="odaUser">root</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Cliente" id="28">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ID</text-property>
+                    <text-property name="heading">ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACTIVO</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ACTIVO</text-property>
+                    <text-property name="heading">ACTIVO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">APELLIDO1</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">APELLIDO1</text-property>
+                    <text-property name="heading">APELLIDO1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">APELLIDO2</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">APELLIDO2</text-property>
+                    <text-property name="heading">APELLIDO2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CP</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CP</text-property>
+                    <text-property name="heading">CP</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DIRECCION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DIRECCION</text-property>
+                    <text-property name="heading">DIRECCION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DNI</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DNI</text-property>
+                    <text-property name="heading">DNI</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EMAIL</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">EMAIL</text-property>
+                    <text-property name="heading">EMAIL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NOMBRE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">NOMBRE</text-property>
+                    <text-property name="heading">NOMBRE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">OBSERVACIONES</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">OBSERVACIONES</text-property>
+                    <text-property name="heading">OBSERVACIONES</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">POBLACION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">POBLACION</text-property>
+                    <text-property name="heading">POBLACION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROVINCIA</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PROVINCIA</text-property>
+                    <text-property name="heading">PROVINCIA</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TELEFONO_FIJO</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TELEFONO_FIJO</text-property>
+                    <text-property name="heading">TELEFONO_FIJO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TELEFONO_MOVIL</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TELEFONO_MOVIL</text-property>
+                    <text-property name="heading">TELEFONO_MOVIL</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">ACTIVO</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">APELLIDO1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">APELLIDO2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">CP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">DIRECCION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DNI</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">EMAIL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">NOMBRE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">OBSERVACIONES</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">POBLACION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">PROVINCIA</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">TELEFONO_FIJO</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">TELEFONO_MOVIL</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ID</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">ACTIVO</property>
+                    <property name="nativeName">ACTIVO</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-7</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">APELLIDO1</property>
+                    <property name="nativeName">APELLIDO1</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">APELLIDO2</property>
+                    <property name="nativeName">APELLIDO2</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">CP</property>
+                    <property name="nativeName">CP</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">DIRECCION</property>
+                    <property name="nativeName">DIRECCION</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DNI</property>
+                    <property name="nativeName">DNI</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">EMAIL</property>
+                    <property name="nativeName">EMAIL</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">NOMBRE</property>
+                    <property name="nativeName">NOMBRE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">OBSERVACIONES</property>
+                    <property name="nativeName">OBSERVACIONES</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">POBLACION</property>
+                    <property name="nativeName">POBLACION</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">PROVINCIA</property>
+                    <property name="nativeName">PROVINCIA</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">TELEFONO_FIJO</property>
+                    <property name="nativeName">TELEFONO_FIJO</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">TELEFONO_MOVIL</property>
+                    <property name="nativeName">TELEFONO_MOVIL</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from cliente
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACTIVO</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACTIVO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACTIVO</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>APELLIDO1</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>APELLIDO1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>APELLIDO1</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>APELLIDO2</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>APELLIDO2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>APELLIDO2</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CP</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CP</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CP</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DIRECCION</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DIRECCION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DIRECCION</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DNI</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DNI</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DNI</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EMAIL</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>EMAIL</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EMAIL</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NOMBRE</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>NOMBRE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NOMBRE</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>OBSERVACIONES</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>OBSERVACIONES</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>OBSERVACIONES</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>POBLACION</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>POBLACION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>POBLACION</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROVINCIA</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROVINCIA</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROVINCIA</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TELEFONO_FIJO</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TELEFONO_FIJO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TELEFONO_FIJO</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TELEFONO_MOVIL</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TELEFONO_MOVIL</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TELEFONO_MOVIL</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="24">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="25">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="26">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid name="cabecera" id="1098" extends="2.cabecera">
+            <overridden-values>
+                <ref-entry baseId="7" id="7"/>
+                <ref-entry baseId="8" id="8"/>
+                <ref-entry baseId="9" id="9"/>
+                <ref-entry baseId="10" name="NewGrid1" id="10">
+                    <property name="width">7.604166666666667in</property>
+                </ref-entry>
+                <ref-entry baseId="11" id="11">
+                    <property name="width">1.6666666666666667in</property>
+                </ref-entry>
+                <ref-entry baseId="12" id="12">
+                    <property name="width">4.229166666666667in</property>
+                </ref-entry>
+                <ref-entry baseId="13" id="13"/>
+                <ref-entry baseId="14" id="14"/>
+                <ref-entry baseId="15" id="15"/>
+                <ref-entry baseId="18" name="NewImage" id="18"/>
+                <ref-entry baseId="16" id="16"/>
+                <ref-entry baseId="20" name="NewText" id="20"/>
+                <ref-entry baseId="17" id="17"/>
+                <ref-entry baseId="19" name="NewImage1" id="19"/>
+                <ref-entry baseId="21" name="NewText1" id="21"/>
+                <ref-entry baseId="22" name="NewText2" id="22"/>
+            </overridden-values>
+        </grid>
+        <grid id="1227">
+            <property name="height">6.333333333333333in</property>
+            <property name="width">7.833333333333333in</property>
+            <column id="1228">
+                <property name="width">7.833333333333333in</property>
+            </column>
+            <row id="1229">
+                <property name="height">6.333333333333333in</property>
+                <cell id="1230">
+                    <grid id="1231">
+                        <property name="height">7.302083333333333in</property>
+                        <property name="width">7.760416666666667in</property>
+                        <column id="1232">
+                            <property name="width">3.84375in</property>
+                        </column>
+                        <column id="1233">
+                            <property name="width">3.9166666666666665in</property>
+                        </column>
+                        <row id="1234">
+                            <property name="height">0.5416666666666666in</property>
+                            <cell id="1235">
+                                <grid name="Código" id="1243" extends="2.Código">
+                                    <overridden-values>
+                                        <ref-entry baseId="1229" id="1336"/>
+                                        <ref-entry baseId="1230" id="1337"/>
+                                        <ref-entry baseId="1234" id="1338"/>
+                                        <ref-entry baseId="1235" id="1339"/>
+                                        <ref-entry baseId="1264" name="NewLabel10" id="1264"/>
+                                        <ref-entry baseId="1236" id="1340"/>
+                                        <ref-entry baseId="1284" name="NewData12" id="1284"/>
+                                    </overridden-values>
+                                </grid>
+                            </cell>
+                            <cell id="1236"/>
+                        </row>
+                        <row id="1237">
+                            <property name="height">3.6875in</property>
+                            <cell id="1238">
+                                <grid name="nombre y apellidos" id="1285" extends="2.nombre y apellidos">
+                                    <overridden-values>
+                                        <ref-entry baseId="1026" id="1026"/>
+                                        <ref-entry baseId="1027" id="1027"/>
+                                        <ref-entry baseId="1028" id="1028"/>
+                                        <ref-entry baseId="1045" name="NewGrid4" id="1045">
+                                            <property name="width">3.6041666666666665in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1046" id="1046"/>
+                                        <ref-entry baseId="1047" id="1047"/>
+                                        <ref-entry baseId="1048" id="1048">
+                                            <property name="width">1.1770833333333333in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1057" id="1057"/>
+                                        <ref-entry baseId="1058" id="1058"/>
+                                        <ref-entry baseId="1081" name="NewLabel" id="1081"/>
+                                        <ref-entry baseId="1059" id="1059"/>
+                                        <ref-entry baseId="1082" name="NewData" id="1082">
+                                            <property name="resultSetColumn">APELLIDO1</property>
+                                            <property name="dataSet">Cliente</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">ID</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                                                    <property name="dataType">integer</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">ACTIVO</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["ACTIVO"]</expression>
+                                                    <property name="dataType">integer</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">APELLIDO1</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["APELLIDO1"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">APELLIDO2</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["APELLIDO2"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">CP</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["CP"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">DIRECCION</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["DIRECCION"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">DNI</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["DNI"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">EMAIL</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["EMAIL"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">NOMBRE</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["NOMBRE"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">OBSERVACIONES</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["OBSERVACIONES"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">POBLACION</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["POBLACION"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">PROVINCIA</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["PROVINCIA"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">TELEFONO_FIJO</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["TELEFONO_FIJO"]</expression>
+                                                    <property name="dataType">integer</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">TELEFONO_MOVIL</property>
+                                                    <expression name="expression" type="javascript">dataSetRow["TELEFONO_MOVIL"]</expression>
+                                                    <property name="dataType">integer</property>
+                                                </structure>
+                                            </list-property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1060" id="1060"/>
+                                        <ref-entry baseId="1063" id="1063"/>
+                                        <ref-entry baseId="1064" id="1064"/>
+                                        <ref-entry baseId="1083" name="NewLabel1" id="1083"/>
+                                        <ref-entry baseId="1065" id="1065"/>
+                                        <ref-entry baseId="1084" name="NewData1" id="1084"/>
+                                        <ref-entry baseId="1066" id="1066"/>
+                                        <ref-entry baseId="1085" name="NewData2" id="1085"/>
+                                        <ref-entry baseId="1069" id="1069"/>
+                                        <ref-entry baseId="1070" id="1070"/>
+                                        <ref-entry baseId="1088" name="NewLabel3" id="1088"/>
+                                        <ref-entry baseId="1071" id="1071"/>
+                                        <ref-entry baseId="1089" name="NewData4" id="1089"/>
+                                        <ref-entry baseId="1072" id="1072"/>
+                                    </overridden-values>
+                                </grid>
+                            </cell>
+                            <cell id="1239">
+                                <grid name="direccion telefono" id="1286" extends="2.direccion telefono">
+                                    <property name="height">3.3541666666666665in</property>
+                                    <property name="width">3.6770833333333335in</property>
+                                    <overridden-values>
+                                        <ref-entry baseId="1141" id="1141">
+                                            <property name="width">0.8958333333333334in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1142" id="1142">
+                                            <property name="width">2.78125in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1148" id="1148">
+                                            <property name="height">0.53125in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1149" id="1149"/>
+                                        <ref-entry baseId="1212" name="NewLabel2" id="1212"/>
+                                        <ref-entry baseId="1150" id="1150"/>
+                                        <ref-entry baseId="1220" name="NewData3" id="1220"/>
+                                        <ref-entry baseId="1156" id="1156">
+                                            <property name="height">0.4791666666666667in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1157" id="1157"/>
+                                        <ref-entry baseId="1213" name="NewLabel4" id="1213"/>
+                                        <ref-entry baseId="1158" id="1158"/>
+                                        <ref-entry baseId="1221" name="NewData5" id="1221"/>
+                                        <ref-entry baseId="1164" id="1164">
+                                            <property name="height">0.4583333333333333in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1165" id="1165"/>
+                                        <ref-entry baseId="1214" name="NewLabel5" id="1214"/>
+                                        <ref-entry baseId="1166" id="1166"/>
+                                        <ref-entry baseId="1222" name="NewData6" id="1222"/>
+                                        <ref-entry baseId="1172" id="1172">
+                                            <property name="height">0.5416666666666666in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1173" id="1173"/>
+                                        <ref-entry baseId="1215" name="NewLabel6" id="1215"/>
+                                        <ref-entry baseId="1174" id="1174"/>
+                                        <ref-entry baseId="1223" name="NewData7" id="1223"/>
+                                        <ref-entry baseId="1180" id="1180">
+                                            <property name="height">0.4791666666666667in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1181" id="1181"/>
+                                        <ref-entry baseId="1216" name="NewLabel7" id="1216"/>
+                                        <ref-entry baseId="1182" id="1182"/>
+                                        <ref-entry baseId="1224" name="NewData8" id="1224"/>
+                                        <ref-entry baseId="1188" id="1188">
+                                            <property name="height">0.4791666666666667in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1189" id="1189"/>
+                                        <ref-entry baseId="1217" name="NewLabel8" id="1217"/>
+                                        <ref-entry baseId="1190" id="1190"/>
+                                        <ref-entry baseId="1225" name="NewData9" id="1225"/>
+                                        <ref-entry baseId="1196" id="1196">
+                                            <property name="height">0.3854166666666667in</property>
+                                        </ref-entry>
+                                        <ref-entry baseId="1197" id="1197"/>
+                                        <ref-entry baseId="1218" name="NewLabel9" id="1218"/>
+                                        <ref-entry baseId="1198" id="1198"/>
+                                        <ref-entry baseId="1226" name="NewData10" id="1226"/>
+                                    </overridden-values>
+                                </grid>
+                            </cell>
+                        </row>
+                        <row id="1240">
+                            <property name="height">3.0729166666666665in</property>
+                            <cell id="1241"/>
+                            <cell id="1242">
+                                <grid name="observaciones" id="1287" extends="2.observaciones">
+                                    <overridden-values>
+                                        <ref-entry baseId="1286" id="1341"/>
+                                        <ref-entry baseId="1289" id="1289"/>
+                                        <ref-entry baseId="1290" id="1290"/>
+                                        <ref-entry baseId="1301" name="NewLabel12" id="1301"/>
+                                        <ref-entry baseId="1293" id="1293"/>
+                                        <ref-entry baseId="1294" id="1294"/>
+                                        <ref-entry baseId="1302" name="NewText3" id="1302"/>
+                                    </overridden-values>
+                                </grid>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+        <grid id="1317">
+            <property name="height">0.6770833333333334in</property>
+            <property name="width">7.864583333333333in</property>
+            <column id="1318">
+                <property name="width">7.864583333333333in</property>
+            </column>
+            <row id="1319">
+                <property name="height">0.6770833333333334in</property>
+                <cell id="1320">
+                    <grid name="activo1" id="1321" extends="2.activo">
+                        <property name="width">1.8229166666666667in</property>
+                        <overridden-values>
+                            <ref-entry baseId="1266" id="1266"/>
+                            <ref-entry baseId="1267" id="1267">
+                                <property name="width">1.03125in</property>
+                            </ref-entry>
+                            <ref-entry baseId="1269" id="1269"/>
+                            <ref-entry baseId="1270" id="1270"/>
+                            <ref-entry baseId="1281" name="NewLabel11" id="1281"/>
+                            <ref-entry baseId="1271" id="1271"/>
+                            <ref-entry baseId="1283" name="NewData11" id="1283">
+                                <property name="resultSetColumn">ACTIVO</property>
+                                <property name="dataSet">Cliente</property>
+                                <list-property name="boundDataColumns">
+                                    <structure>
+                                        <property name="name">ID</property>
+                                        <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">ACTIVO</property>
+                                        <expression name="expression" type="javascript">dataSetRow["ACTIVO"]</expression>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">APELLIDO1</property>
+                                        <expression name="expression" type="javascript">dataSetRow["APELLIDO1"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">APELLIDO2</property>
+                                        <expression name="expression" type="javascript">dataSetRow["APELLIDO2"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">CP</property>
+                                        <expression name="expression" type="javascript">dataSetRow["CP"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">DIRECCION</property>
+                                        <expression name="expression" type="javascript">dataSetRow["DIRECCION"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">DNI</property>
+                                        <expression name="expression" type="javascript">dataSetRow["DNI"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">EMAIL</property>
+                                        <expression name="expression" type="javascript">dataSetRow["EMAIL"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">NOMBRE</property>
+                                        <expression name="expression" type="javascript">dataSetRow["NOMBRE"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">OBSERVACIONES</property>
+                                        <expression name="expression" type="javascript">dataSetRow["OBSERVACIONES"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">POBLACION</property>
+                                        <expression name="expression" type="javascript">dataSetRow["POBLACION"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">PROVINCIA</property>
+                                        <expression name="expression" type="javascript">dataSetRow["PROVINCIA"]</expression>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">TELEFONO_FIJO</property>
+                                        <expression name="expression" type="javascript">dataSetRow["TELEFONO_FIJO"]</expression>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="name">TELEFONO_MOVIL</property>
+                                        <expression name="expression" type="javascript">dataSetRow["TELEFONO_MOVIL"]</expression>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                </list-property>
+                            </ref-entry>
+                        </overridden-values>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

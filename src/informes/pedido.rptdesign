@@ -1,0 +1,1601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20120213 Build &lt;3.7.2.v20120214-1408></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://localhost:3306/bd</property>
+            <property name="odaUser">root</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="pedido" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ID</text-property>
+                    <text-property name="heading">ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FECHA_ALTA</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FECHA_ALTA</text-property>
+                    <text-property name="heading">FECHA_ALTA</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FECHA_RECEPCION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FECHA_RECEPCION</text-property>
+                    <text-property name="heading">FECHA_RECEPCION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FORMA_DE_PAGO</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FORMA_DE_PAGO</text-property>
+                    <text-property name="heading">FORMA_DE_PAGO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RECIBIDO</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">RECIBIDO</text-property>
+                    <text-property name="heading">RECIBIDO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TOTAL_PEDIDO</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TOTAL_PEDIDO</text-property>
+                    <text-property name="heading">TOTAL_PEDIDO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EMPLEADO_ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">EMPLEADO_ID</text-property>
+                    <text-property name="heading">EMPLEADO_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROVEEDOR_ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">PROVEEDOR_ID</text-property>
+                    <text-property name="heading">PROVEEDOR_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CANTIDAD</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CANTIDAD</text-property>
+                    <text-property name="heading">CANTIDAD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TOTAL_LINEA</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TOTAL_LINEA</text-property>
+                    <text-property name="heading">TOTAL_LINEA</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">UNIDADES_PENDIENTES</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">UNIDADES_PENDIENTES</text-property>
+                    <text-property name="heading">UNIDADES_PENDIENTES</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">UNIDADES_RECIBIDAS</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">UNIDADES_RECIBIDAS</text-property>
+                    <text-property name="heading">UNIDADES_RECIBIDAS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRODUCTO_ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">PRODUCTO_ID</text-property>
+                    <text-property name="heading">PRODUCTO_ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ID_15</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ID</text-property>
+                    <text-property name="heading">ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACTIVO</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ACTIVO</text-property>
+                    <text-property name="heading">ACTIVO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DESCRIPCION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DESCRIPCION</text-property>
+                    <text-property name="heading">DESCRIPCION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NOMBRE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">NOMBRE</text-property>
+                    <text-property name="heading">NOMBRE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">OBSERVACIONES</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">OBSERVACIONES</text-property>
+                    <text-property name="heading">OBSERVACIONES</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PRECIO</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">PRECIO</text-property>
+                    <text-property name="heading">PRECIO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">STOCK_ACTUAL</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">STOCK_ACTUAL</text-property>
+                    <text-property name="heading">STOCK_ACTUAL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">STOCK_MINIMO</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">STOCK_MINIMO</text-property>
+                    <text-property name="heading">STOCK_MINIMO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROVEEDOR_ID_23</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">PROVEEDOR_ID</text-property>
+                    <text-property name="heading">PROVEEDOR_ID</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">FECHA_ALTA</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">FECHA_RECEPCION</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">FORMA_DE_PAGO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">RECIBIDO</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">TOTAL_PEDIDO</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">EMPLEADO_ID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">PROVEEDOR_ID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">ID_9</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">CANTIDAD</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">TOTAL_LINEA</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">UNIDADES_PENDIENTES</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">UNIDADES_RECIBIDAS</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">PRODUCTO_ID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">ID_15</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">ACTIVO</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">DESCRIPCION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">NOMBRE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">OBSERVACIONES</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">PRECIO</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">STOCK_ACTUAL</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">STOCK_MINIMO</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">PROVEEDOR_ID_23</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ID</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">FECHA_ALTA</property>
+                    <property name="nativeName">FECHA_ALTA</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">FECHA_RECEPCION</property>
+                    <property name="nativeName">FECHA_RECEPCION</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">FORMA_DE_PAGO</property>
+                    <property name="nativeName">FORMA_DE_PAGO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">RECIBIDO</property>
+                    <property name="nativeName">RECIBIDO</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-7</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">TOTAL_PEDIDO</property>
+                    <property name="nativeName">TOTAL_PEDIDO</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">EMPLEADO_ID</property>
+                    <property name="nativeName">EMPLEADO_ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">PROVEEDOR_ID</property>
+                    <property name="nativeName">PROVEEDOR_ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">ID_9</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">CANTIDAD</property>
+                    <property name="nativeName">CANTIDAD</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">TOTAL_LINEA</property>
+                    <property name="nativeName">TOTAL_LINEA</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">UNIDADES_PENDIENTES</property>
+                    <property name="nativeName">UNIDADES_PENDIENTES</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">UNIDADES_RECIBIDAS</property>
+                    <property name="nativeName">UNIDADES_RECIBIDAS</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">PRODUCTO_ID</property>
+                    <property name="nativeName">PRODUCTO_ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">ID_15</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">ACTIVO</property>
+                    <property name="nativeName">ACTIVO</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-7</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">DESCRIPCION</property>
+                    <property name="nativeName">DESCRIPCION</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">NOMBRE</property>
+                    <property name="nativeName">NOMBRE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">OBSERVACIONES</property>
+                    <property name="nativeName">OBSERVACIONES</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">PRECIO</property>
+                    <property name="nativeName">PRECIO</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">STOCK_ACTUAL</property>
+                    <property name="nativeName">STOCK_ACTUAL</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">STOCK_MINIMO</property>
+                    <property name="nativeName">STOCK_MINIMO</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">PROVEEDOR_ID_23</property>
+                    <property name="nativeName">PROVEEDOR_ID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from pedido,lineapedido,producto]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FECHA_ALTA</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FECHA_ALTA</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FECHA_ALTA</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FECHA_RECEPCION</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FECHA_RECEPCION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FECHA_RECEPCION</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FORMA_DE_PAGO</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FORMA_DE_PAGO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FORMA_DE_PAGO</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RECIBIDO</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-7</design:nativeDataTypeCode>
+            <design:precision>1</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>RECIBIDO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RECIBIDO</design:label>
+            <design:formattingHints>
+              <design:displaySize>1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TOTAL_PEDIDO</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>22</design:precision>
+            <design:scale>31</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TOTAL_PEDIDO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TOTAL_PEDIDO</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>EMPLEADO_ID</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>EMPLEADO_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>EMPLEADO_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROVEEDOR_ID</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROVEEDOR_ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROVEEDOR_ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid name="cabecera" id="1098">
+            <property name="marginTop">3pt</property>
+            <property name="marginBottom">3pt</property>
+            <property name="height">2.5104166666666665in</property>
+            <property name="width">7.677083333333333in</property>
+            <column id="1099">
+                <property name="width">7.65625in</property>
+            </column>
+            <row id="1100">
+                <property name="height">2.5104166666666665in</property>
+                <cell id="9">
+                    <property name="fontFamily">"Arabic Transparent"</property>
+                    <property name="fontSize">18pt</property>
+                    <grid name="NewGrid1" id="10">
+                        <property name="borderBottomColor">#838383</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">5px</property>
+                        <property name="borderLeftColor">#838383</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">5px</property>
+                        <property name="borderRightColor">#838383</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">5px</property>
+                        <property name="borderTopColor">#838383</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">5px</property>
+                        <property name="height">1.5833333333333333in</property>
+                        <property name="width">7.604166666666667in</property>
+                        <column id="11">
+                            <property name="width">1.6666666666666667in</property>
+                        </column>
+                        <column id="12">
+                            <property name="width">4.229166666666667in</property>
+                        </column>
+                        <column id="13">
+                            <property name="width">1.6354166666666667in</property>
+                        </column>
+                        <row id="14">
+                            <property name="height">1.5833333333333333in</property>
+                            <property name="backgroundColor">#000040</property>
+                            <cell id="15">
+                                <image name="NewImage" id="18">
+                                    <property name="borderBottomColor">#838383</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">3px</property>
+                                    <property name="borderLeftColor">#838383</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">3px</property>
+                                    <property name="borderRightColor">#838383</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">3px</property>
+                                    <property name="borderTopColor">#838383</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">3px</property>
+                                    <property name="marginTop">5pt</property>
+                                    <property name="marginLeft">5pt</property>
+                                    <property name="marginBottom">1pt</property>
+                                    <property name="marginRight">5pt</property>
+                                    <property name="height">113px</property>
+                                    <property name="width">127px</property>
+                                    <property name="source">file</property>
+                                    <expression name="uri" type="constant">src/images/panaderia_bolleria_latoneros10_madrid.jpg</expression>
+                                </image>
+                            </cell>
+                            <cell id="16">
+                                <text name="NewText" id="20">
+                                    <property name="fontFamily">"Baskerville Old Face"</property>
+                                    <property name="fontSize">22pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#808080</property>
+                                    <property name="borderBottomColor">#000040</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000040</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000040</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000040</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="contentType">auto</property>
+                                    <text-property name="content"><![CDATA[
+PANADERIA BOLLERIA
+]]></text-property>
+                                </text>
+                            </cell>
+                            <cell id="17">
+                                <image name="NewImage1" id="19">
+                                    <property name="borderBottomColor">#838383</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">3px</property>
+                                    <property name="borderLeftColor">#838383</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">3px</property>
+                                    <property name="borderRightColor">#838383</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">3px</property>
+                                    <property name="borderTopColor">#838383</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">3px</property>
+                                    <property name="marginTop">5pt</property>
+                                    <property name="marginLeft">5pt</property>
+                                    <property name="marginBottom">1pt</property>
+                                    <property name="marginRight">5pt</property>
+                                    <property name="height">1.167in</property>
+                                    <property name="width">1.333in</property>
+                                    <property name="source">file</property>
+                                    <expression name="uri" type="constant">src/images/PC030400 copia.jpg</expression>
+                                </image>
+                            </cell>
+                        </row>
+                    </grid>
+                    <text name="NewText1" id="21">
+                        <property name="contentType">auto</property>
+                    </text>
+                    <text name="NewText2" id="22">
+                        <property name="backgroundColor">#D3D3D3</property>
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">#838383</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#838383</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#838383</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#838383</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="marginTop">3pt</property>
+                        <property name="marginBottom">3pt</property>
+                        <property name="paddingTop">3pt</property>
+                        <property name="paddingBottom">3pt</property>
+                        <property name="textAlign">left</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[  DATOS PEDIDO]]></text-property>
+                    </text>
+                </cell>
+            </row>
+        </grid>
+        <grid id="1227">
+            <property name="height">6.5in</property>
+            <property name="width">7.822916666666667in</property>
+            <column id="1228">
+                <property name="width">7.822916666666667in</property>
+            </column>
+            <row id="1229">
+                <property name="height">6.5in</property>
+                <cell id="1230">
+                    <grid id="1231">
+                        <property name="height">2.4895833333333335in</property>
+                        <property name="width">7.760416666666667in</property>
+                        <column id="1232">
+                            <property name="width">3.84375in</property>
+                        </column>
+                        <column id="1233">
+                            <property name="width">3.9166666666666665in</property>
+                        </column>
+                        <row id="1234">
+                            <property name="height">2.40625in</property>
+                            <cell id="1235">
+                                <grid name="Código" id="1243">
+                                    <property name="borderBottomColor">#838383</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#838383</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#838383</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#838383</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="marginTop">5pt</property>
+                                    <property name="marginLeft">5pt</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <property name="height">0.3854166666666667in</property>
+                                    <property name="width">1.9583333333333333in</property>
+                                    <column id="1336">
+                                        <property name="width">0.90625in</property>
+                                        <property name="backgroundColor">#C0C0C0</property>
+                                        <property name="fontFamily">"Times New Roman"</property>
+                                        <property name="verticalAlign">middle</property>
+                                    </column>
+                                    <column id="1337">
+                                        <property name="width">1.0520833333333333in</property>
+                                        <property name="verticalAlign">top</property>
+                                    </column>
+                                    <row id="1338">
+                                        <property name="height">0.3854166666666667in</property>
+                                        <cell id="1339">
+                                            <label name="NewLabel10" id="1264">
+                                                <property name="fontFamily">"Times New Roman"</property>
+                                                <property name="fontSize">12pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <text-property name="text">Código</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="1340">
+                                            <property name="borderBottomColor">#838383</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">thin</property>
+                                            <property name="borderLeftColor">#838383</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">thin</property>
+                                            <property name="borderRightColor">#838383</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">thin</property>
+                                            <property name="borderTopColor">#838383</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">thin</property>
+                                            <data id="1501">
+                                                <property name="dataSet">pedido</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">ID</property>
+                                                        <text-property name="displayName">ID</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">ID</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                                <grid name="nombre y apellidos" id="1285">
+                                    <property name="backgroundColor">#F4F4F4</property>
+                                    <property name="color">#000000</property>
+                                    <property name="marginTop">10pt</property>
+                                    <property name="marginLeft">5pt</property>
+                                    <property name="height">1.6666666666666667in</property>
+                                    <property name="width">7.510416666666667in</property>
+                                    <column id="1026">
+                                        <property name="width">7.510416666666667in</property>
+                                    </column>
+                                    <row id="1027">
+                                        <property name="height">1.6666666666666667in</property>
+                                        <cell id="1028">
+                                            <property name="backgroundColor">#FAFAFA</property>
+                                            <grid name="NewGrid4" id="1045">
+                                                <property name="borderBottomColor">#838383</property>
+                                                <property name="borderBottomStyle">solid</property>
+                                                <property name="borderBottomWidth">thin</property>
+                                                <property name="borderLeftColor">#838383</property>
+                                                <property name="borderLeftStyle">solid</property>
+                                                <property name="borderLeftWidth">thin</property>
+                                                <property name="borderRightColor">#838383</property>
+                                                <property name="borderRightStyle">solid</property>
+                                                <property name="borderRightWidth">thin</property>
+                                                <property name="borderTopColor">#838383</property>
+                                                <property name="borderTopStyle">solid</property>
+                                                <property name="borderTopWidth">thin</property>
+                                                <property name="height">0.9270833333333334in</property>
+                                                <property name="width">3.6041666666666665in</property>
+                                                <column id="1046">
+                                                    <property name="width">0.875in</property>
+                                                    <property name="backgroundColor">#C0C0C0</property>
+                                                    <property name="fontFamily">"Times New Roman"</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                </column>
+                                                <column id="1047">
+                                                    <property name="width">2.7291666666666665in</property>
+                                                    <property name="fontFamily">"Times New Roman"</property>
+                                                    <property name="verticalAlign">middle</property>
+                                                </column>
+                                                <row id="1057">
+                                                    <property name="height">0.4166666666666667in</property>
+                                                    <property name="fontFamily">"Times New Roman"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <cell id="1058">
+                                                        <property name="borderBottomColor">#838383</property>
+                                                        <property name="borderBottomStyle">solid</property>
+                                                        <property name="borderBottomWidth">thin</property>
+                                                        <property name="borderLeftColor">#838383</property>
+                                                        <property name="borderLeftStyle">solid</property>
+                                                        <property name="borderRightColor">#838383</property>
+                                                        <property name="borderRightStyle">solid</property>
+                                                        <property name="borderRightWidth">thin</property>
+                                                        <property name="borderTopColor">#838383</property>
+                                                        <property name="borderTopStyle">solid</property>
+                                                        <label name="NewLabel" id="1081">
+                                                            <property name="backgroundColor">#C0C0C0</property>
+                                                            <text-property name="text">Empleado</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="1059">
+                                                        <data id="1502">
+                                                            <property name="dataSet">pedido</property>
+                                                            <list-property name="boundDataColumns">
+                                                                <structure>
+                                                                    <property name="name">EMPLEADO_ID</property>
+                                                                    <text-property name="displayName">EMPLEADO_ID</text-property>
+                                                                    <expression name="expression" type="javascript">dataSetRow["EMPLEADO_ID"]</expression>
+                                                                    <property name="dataType">integer</property>
+                                                                </structure>
+                                                            </list-property>
+                                                            <property name="resultSetColumn">EMPLEADO_ID</property>
+                                                        </data>
+                                                    </cell>
+                                                </row>
+                                                <row id="1063">
+                                                    <property name="height">0.4479166666666667in</property>
+                                                    <property name="fontFamily">"Times New Roman"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="borderBottomColor">#838383</property>
+                                                    <property name="borderBottomStyle">solid</property>
+                                                    <property name="borderLeftColor">#838383</property>
+                                                    <property name="borderLeftStyle">solid</property>
+                                                    <property name="borderRightColor">#838383</property>
+                                                    <property name="borderRightStyle">solid</property>
+                                                    <property name="borderTopColor">#838383</property>
+                                                    <property name="borderTopStyle">solid</property>
+                                                    <cell id="1064">
+                                                        <property name="borderBottomColor">#838383</property>
+                                                        <property name="borderBottomStyle">solid</property>
+                                                        <property name="borderBottomWidth">thin</property>
+                                                        <property name="borderLeftColor">#838383</property>
+                                                        <property name="borderLeftStyle">solid</property>
+                                                        <property name="borderLeftWidth">thin</property>
+                                                        <property name="borderRightColor">#838383</property>
+                                                        <property name="borderRightStyle">solid</property>
+                                                        <property name="borderRightWidth">thin</property>
+                                                        <property name="borderTopColor">#838383</property>
+                                                        <property name="borderTopStyle">solid</property>
+                                                        <property name="borderTopWidth">thin</property>
+                                                        <label name="NewLabel1" id="1083">
+                                                            <property name="backgroundColor">#C0C0C0</property>
+                                                            <text-property name="text">Proveedor</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="1065">
+                                                        <property name="borderBottomColor">#838383</property>
+                                                        <property name="borderBottomStyle">solid</property>
+                                                        <property name="borderBottomWidth">thin</property>
+                                                        <property name="borderTopColor">#838383</property>
+                                                        <property name="borderTopStyle">solid</property>
+                                                        <property name="borderTopWidth">thin</property>
+                                                        <data id="1503">
+                                                            <property name="dataSet">pedido</property>
+                                                            <list-property name="boundDataColumns">
+                                                                <structure>
+                                                                    <property name="name">PROVEEDOR_ID</property>
+                                                                    <text-property name="displayName">PROVEEDOR_ID</text-property>
+                                                                    <expression name="expression" type="javascript">dataSetRow["PROVEEDOR_ID"]</expression>
+                                                                    <property name="dataType">integer</property>
+                                                                </structure>
+                                                            </list-property>
+                                                            <property name="resultSetColumn">PROVEEDOR_ID</property>
+                                                        </data>
+                                                    </cell>
+                                                </row>
+                                            </grid>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="1236">
+                                <grid name="Código1" id="1359">
+                                    <property name="borderBottomColor">#838383</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#838383</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#838383</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#838383</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="marginTop">5pt</property>
+                                    <property name="marginLeft">5pt</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <property name="height">0.34375in</property>
+                                    <property name="width">2.8541666666666665in</property>
+                                    <column id="1360">
+                                        <property name="width">1.3229166666666667in</property>
+                                        <property name="backgroundColor">#C0C0C0</property>
+                                        <property name="fontFamily">"Times New Roman"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="verticalAlign">middle</property>
+                                    </column>
+                                    <column id="1361">
+                                        <property name="width">1.53125in</property>
+                                        <property name="fontFamily">"Times New Roman"</property>
+                                        <property name="verticalAlign">top</property>
+                                    </column>
+                                    <row id="1362">
+                                        <property name="height">0.34375in</property>
+                                        <cell id="1363">
+                                            <label name="NewLabel101" id="1364">
+                                                <property name="fontFamily">"Times New Roman"</property>
+                                                <property name="fontSize">12pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <text-property name="text">Fecha Alta</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="1365">
+                                            <property name="borderBottomColor">#838383</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">thin</property>
+                                            <property name="borderLeftColor">#838383</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">thin</property>
+                                            <property name="borderRightColor">#838383</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">thin</property>
+                                            <property name="borderTopColor">#838383</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">thin</property>
+                                            <data id="1504">
+                                                <property name="dataSet">pedido</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">FECHA_ALTA</property>
+                                                        <text-property name="displayName">FECHA_ALTA</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["FECHA_ALTA"]</expression>
+                                                        <property name="dataType">date</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">FECHA_ALTA</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                                <grid name="Código2" id="1366">
+                                    <property name="borderBottomColor">#838383</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#838383</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#838383</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#838383</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="marginTop">5pt</property>
+                                    <property name="marginLeft">5pt</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <property name="height">0.3645833333333333in</property>
+                                    <property name="width">2.84375in</property>
+                                    <column id="1367">
+                                        <property name="width">1.34375in</property>
+                                        <property name="backgroundColor">#C0C0C0</property>
+                                        <property name="fontFamily">"Times New Roman"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="verticalAlign">middle</property>
+                                    </column>
+                                    <column id="1368">
+                                        <property name="width">1.5in</property>
+                                        <property name="verticalAlign">top</property>
+                                    </column>
+                                    <row id="1369">
+                                        <property name="height">0.3645833333333333in</property>
+                                        <cell id="1370">
+                                            <label name="NewLabel102" id="1371">
+                                                <property name="fontFamily">"Times New Roman"</property>
+                                                <property name="fontSize">12pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <text-property name="text">Fecha Recepcion</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="1372">
+                                            <property name="borderBottomColor">#838383</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">thin</property>
+                                            <property name="borderLeftColor">#838383</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">thin</property>
+                                            <property name="borderRightColor">#838383</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">thin</property>
+                                            <property name="borderTopColor">#838383</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">thin</property>
+                                            <data id="1505">
+                                                <property name="dataSet">pedido</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">FECHA_RECEPCION</property>
+                                                        <text-property name="displayName">FECHA_RECEPCION</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["FECHA_RECEPCION"]</expression>
+                                                        <property name="dataType">date</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">FECHA_RECEPCION</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                                <grid name="Código21" id="1380">
+                                    <property name="borderBottomColor">#838383</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#838383</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#838383</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#838383</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="marginTop">5pt</property>
+                                    <property name="marginLeft">5pt</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <property name="height">0.3645833333333333in</property>
+                                    <property name="width">2.84375in</property>
+                                    <column id="1381">
+                                        <property name="width">1.34375in</property>
+                                        <property name="backgroundColor">#C0C0C0</property>
+                                        <property name="fontFamily">"Times New Roman"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="verticalAlign">middle</property>
+                                    </column>
+                                    <column id="1382">
+                                        <property name="width">1.5in</property>
+                                        <property name="verticalAlign">top</property>
+                                    </column>
+                                    <row id="1383">
+                                        <property name="height">0.3645833333333333in</property>
+                                        <cell id="1384">
+                                            <label name="NewLabel1021" id="1385">
+                                                <property name="fontFamily">"Times New Roman"</property>
+                                                <property name="fontSize">12pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <text-property name="text">Forma de Pago</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="1386">
+                                            <property name="borderBottomColor">#838383</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">thin</property>
+                                            <property name="borderLeftColor">#838383</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">thin</property>
+                                            <property name="borderRightColor">#838383</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">thin</property>
+                                            <property name="borderTopColor">#838383</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">thin</property>
+                                            <data id="1508">
+                                                <property name="dataSet">pedido</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">FORMA_DE_PAGO</property>
+                                                        <text-property name="displayName">FORMA_DE_PAGO</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["FORMA_DE_PAGO"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">FORMA_DE_PAGO</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                                <grid name="Código22" id="1394">
+                                    <property name="borderBottomColor">#838383</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#838383</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#838383</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#838383</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="marginTop">5pt</property>
+                                    <property name="marginLeft">5pt</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <property name="height">0.3645833333333333in</property>
+                                    <property name="width">2.3229166666666665in</property>
+                                    <column id="1395">
+                                        <property name="width">1.0208333333333333in</property>
+                                        <property name="backgroundColor">#C0C0C0</property>
+                                        <property name="fontFamily">"Times New Roman"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="verticalAlign">middle</property>
+                                    </column>
+                                    <column id="1396">
+                                        <property name="width">1.3020833333333333in</property>
+                                        <property name="verticalAlign">top</property>
+                                    </column>
+                                    <row id="1397">
+                                        <property name="height">0.3645833333333333in</property>
+                                        <cell id="1398">
+                                            <label name="NewLabel1022" id="1399">
+                                                <property name="fontFamily">"Times New Roman"</property>
+                                                <property name="fontSize">12pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <text-property name="text">Recibido</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="1400">
+                                            <property name="borderBottomColor">#838383</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">thin</property>
+                                            <property name="borderLeftColor">#838383</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">thin</property>
+                                            <property name="borderRightColor">#838383</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">thin</property>
+                                            <property name="borderTopColor">#838383</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">thin</property>
+                                            <data id="1506">
+                                                <property name="dataSet">pedido</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">RECIBIDO</property>
+                                                        <text-property name="displayName">RECIBIDO</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["RECIBIDO"]</expression>
+                                                        <property name="dataType">integer</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">RECIBIDO</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                                <grid name="Código221" id="1494">
+                                    <property name="borderBottomColor">#838383</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#838383</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#838383</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#838383</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <property name="marginTop">5pt</property>
+                                    <property name="marginLeft">5pt</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <property name="height">0.3645833333333333in</property>
+                                    <property name="width">2.34375in</property>
+                                    <column id="1495">
+                                        <property name="width">1.0104166666666667in</property>
+                                        <property name="backgroundColor">#C0C0C0</property>
+                                        <property name="fontFamily">"Times New Roman"</property>
+                                        <property name="fontSize">12pt</property>
+                                        <property name="verticalAlign">middle</property>
+                                    </column>
+                                    <column id="1496">
+                                        <property name="width">1.3333333333333333in</property>
+                                        <property name="verticalAlign">top</property>
+                                    </column>
+                                    <row id="1497">
+                                        <property name="height">0.3645833333333333in</property>
+                                        <cell id="1498">
+                                            <label name="NewLabel10221" id="1499">
+                                                <property name="fontFamily">"Times New Roman"</property>
+                                                <property name="fontSize">12pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <text-property name="text">Total Pedido</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="1500">
+                                            <property name="borderBottomColor">#838383</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">thin</property>
+                                            <property name="borderLeftColor">#838383</property>
+                                            <property name="borderLeftStyle">solid</property>
+                                            <property name="borderLeftWidth">thin</property>
+                                            <property name="borderRightColor">#838383</property>
+                                            <property name="borderRightStyle">solid</property>
+                                            <property name="borderRightWidth">thin</property>
+                                            <property name="borderTopColor">#838383</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">thin</property>
+                                            <data id="1507">
+                                                <property name="dataSet">pedido</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">TOTAL_PEDIDO</property>
+                                                        <text-property name="displayName">TOTAL_PEDIDO</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["TOTAL_PEDIDO"]</expression>
+                                                        <property name="dataType">float</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">TOTAL_PEDIDO</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                        </row>
+                        <row id="1237">
+                            <property name="height">0.052083333333333336in</property>
+                            <cell id="1238"/>
+                            <cell id="1239"/>
+                        </row>
+                        <row id="1240">
+                            <property name="height">0.03125in</property>
+                            <cell id="1241"/>
+                            <cell id="1242"/>
+                        </row>
+                    </grid>
+                    <table id="1423">
+                        <property name="borderBottomColor">#808080</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">4px</property>
+                        <property name="borderLeftColor">#808080</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">4px</property>
+                        <property name="borderRightColor">#808080</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">4px</property>
+                        <property name="borderTopColor">#808080</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">4px</property>
+                        <property name="marginTop">10pt</property>
+                        <property name="marginLeft">8pt</property>
+                        <property name="marginBottom">10pt</property>
+                        <property name="marginRight">8pt</property>
+                        <property name="width">7.447916666666667in</property>
+                        <property name="dataSet">pedido</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">ID</property>
+                                <text-property name="displayName">ID</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">NOMBRE</property>
+                                <text-property name="displayName">NOMBRE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NOMBRE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">CANTIDAD</property>
+                                <text-property name="displayName">CANTIDAD</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["CANTIDAD"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">PRECIO</property>
+                                <text-property name="displayName">PRECIO</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PRECIO"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">TOTAL_LINEA</property>
+                                <text-property name="displayName">TOTAL_LINEA</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TOTAL_LINEA"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                            <structure>
+                                <property name="name">UNIDADES_PENDIENTES</property>
+                                <text-property name="displayName">UNIDADES_PENDIENTES</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["UNIDADES_PENDIENTES"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">UNIDADES_RECIBIDAS</property>
+                                <text-property name="displayName">UNIDADES_RECIBIDAS</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["UNIDADES_RECIBIDAS"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </list-property>
+                        <column id="1451">
+                            <property name="width">0.5208333333333334in</property>
+                        </column>
+                        <column id="1452">
+                            <property name="width">1.1770833333333333in</property>
+                        </column>
+                        <column id="1453">
+                            <property name="width">1.0416666666666667in</property>
+                        </column>
+                        <column id="1454">
+                            <property name="width">0.8229166666666666in</property>
+                        </column>
+                        <column id="1455">
+                            <property name="width">1.0104166666666667in</property>
+                        </column>
+                        <column id="1456">
+                            <property name="width">1.4791666666666667in</property>
+                        </column>
+                        <column id="1457">
+                            <property name="width">1.375in</property>
+                        </column>
+                        <header>
+                            <row id="1424">
+                                <property name="backgroundColor">#000040</property>
+                                <property name="fontFamily">"Times New Roman"</property>
+                                <property name="fontSize">12pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#C0C0C0</property>
+                                <property name="borderBottomColor">#838383</property>
+                                <property name="borderBottomStyle">solid</property>
+                                <property name="borderLeftColor">#838383</property>
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderRightColor">#838383</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderTopColor">#838383</property>
+                                <property name="borderTopStyle">solid</property>
+                                <property name="verticalAlign">middle</property>
+                                <cell id="1425">
+                                    <label id="1461">
+                                        <text-property name="text">COD</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="1426">
+                                    <label id="1464">
+                                        <text-property name="text">NOMBRE PRODUCTO</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="1427">
+                                    <label id="1466">
+                                        <text-property name="text">UNIDADES</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="1428">
+                                    <label id="1470">
+                                        <text-property name="text">PRECIO</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="1429">
+                                    <label id="1473">
+                                        <text-property name="text">TOTAL</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="1430">
+                                    <label id="1475">
+                                        <text-property name="text">UNIDADES PENDIENTES</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="1431">
+                                    <label id="1477">
+                                        <text-property name="text">UNIDADES RECIBIDAS</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="1433">
+                                <property name="height">0.5in</property>
+                                <property name="fontFamily">"Times New Roman"</property>
+                                <property name="borderBottomColor">#808080</property>
+                                <property name="borderBottomStyle">solid</property>
+                                <property name="borderBottomWidth">thin</property>
+                                <property name="borderLeftColor">#808080</property>
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">thin</property>
+                                <property name="borderRightColor">#808080</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">thin</property>
+                                <property name="borderTopColor">#808080</property>
+                                <property name="borderTopStyle">solid</property>
+                                <property name="borderTopWidth">thin</property>
+                                <property name="verticalAlign">middle</property>
+                                <cell id="1434">
+                                    <data id="1462">
+                                        <property name="resultSetColumn">ID</property>
+                                    </data>
+                                </cell>
+                                <cell id="1435">
+                                    <data id="1465">
+                                        <property name="resultSetColumn">NOMBRE</property>
+                                    </data>
+                                </cell>
+                                <cell id="1436">
+                                    <data id="1467">
+                                        <property name="resultSetColumn">CANTIDAD</property>
+                                    </data>
+                                </cell>
+                                <cell id="1437">
+                                    <data id="1471">
+                                        <property name="resultSetColumn">PRECIO</property>
+                                    </data>
+                                </cell>
+                                <cell id="1438">
+                                    <data id="1474">
+                                        <property name="resultSetColumn">TOTAL_LINEA</property>
+                                    </data>
+                                </cell>
+                                <cell id="1439">
+                                    <data id="1476">
+                                        <property name="resultSetColumn">UNIDADES_PENDIENTES</property>
+                                    </data>
+                                </cell>
+                                <cell id="1440">
+                                    <data id="1478">
+                                        <property name="resultSetColumn">UNIDADES_RECIBIDAS</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="1442">
+                                <property name="height">0.34375in</property>
+                                <cell id="1443"/>
+                                <cell id="1444"/>
+                                <cell id="1445"/>
+                                <cell id="1446"/>
+                                <cell id="1447"/>
+                                <cell id="1448"/>
+                                <cell id="1449"/>
+                            </row>
+                        </footer>
+                    </table>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>
